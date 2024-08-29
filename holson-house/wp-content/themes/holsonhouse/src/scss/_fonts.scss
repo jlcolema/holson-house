@@ -1,0 +1,84 @@
+
+//-------------------------------------------
+//	Fonts
+//-------------------------------------------
+
+
+// Font Family: Crimson
+// Service: Google Fonts
+// URL: https://www.google.com/fonts/specimen/Crimson+Text
+
+
+// Normal
+
+
+@mixin crimson-normal {
+
+	font-family: "Crimson Text", "Times New Roman", Times, Georgia, serif;
+	font-weight: 400;
+	font-style: normal;
+
+}
+
+
+// Italic
+
+
+@mixin crimson-normal-italic {
+
+	font-family: "Crimson Text", "Times New Roman", Times, Georgia, serif;
+	font-weight: 400;
+	font-style: italic;
+
+
+}
+
+
+// Bold
+
+
+@mixin crimson-bold {
+
+	font-family: "Crimson Text", "Times New Roman", Times, Georgia, serif;
+	font-weight: 700;
+	font-style: normal;
+
+}
+
+
+@mixin crimson-bold-italic {
+
+	font-family: "Crimson Text", "Times New Roman", Times, Georgia, serif;
+	font-weight: 700;
+	font-style: italic;
+
+}
+
+
+// Font Family: Oswald
+// Service: Google Fonts
+// URL: https://www.google.com/fonts/specimen/Oswald
+
+
+// Normal
+
+
+@mixin oswald-normal {
+
+	font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+
+}
+
+
+// Bold
+
+
+@mixin oswald-bold {
+
+	font-family: "Oswald", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+
+}

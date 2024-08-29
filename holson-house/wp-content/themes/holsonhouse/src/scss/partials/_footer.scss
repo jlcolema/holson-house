@@ -1,0 +1,727 @@
+
+/*-------------------------------------------
+	Footer
+-------------------------------------------*/
+
+
+#footer {
+
+	// Some sections have increased top spacing...
+
+	.blog &,
+	.category &,
+	.search-results & {
+
+		padding-top: 100px;
+
+	}
+
+	.wrap {}
+
+		.inner-wrap {
+
+			position: relative;
+			border-top: 2px solid $primary-color;
+			padding: 48px 0 185px 0;
+
+			@media screen and (min-width: 700px) {
+
+				padding: 48px 0 95px 0;
+
+			}
+
+			&:after {
+
+				// Temporarily hidden...
+
+				// display: none;
+
+				content: "";
+
+				position: absolute;
+				left: 50%;
+				bottom: 49px;
+				width: 170px;
+				height: 90px;
+				margin: 0 0 0 -85px;
+				background: url(../img/footer-background.svg);
+				background-size: 170px 90px;
+				z-index: 0;
+
+				@media screen and (min-width: 700px) {
+
+					top: 49px;
+					bottom: auto;
+
+				}
+
+				.no-svg & {
+
+					background-image: url(../img/footer-background.png);
+
+				}
+
+			}
+
+		}
+
+			.sub-section {
+
+				position: relative;
+				left: 5px;
+
+				@media screen and (min-width: 510px) {
+
+					position: static;
+					left: auto;
+
+					display: flex;
+					flex-direction: row;
+					flex-wrap: nowrap;
+					justify-content: flex-start;
+					align-items: flex-start;
+					align-content: flex-start;
+
+				}
+
+				&:first-of-type {
+
+					width: 100%;
+					max-width: 240px;
+					margin: 0 auto;
+
+					@media screen and (min-width: 510px) {
+
+						width: auto;
+						max-width: none;
+						margin: 0 0 30px 0;
+
+					}
+
+					@media screen and (min-width: 780px) {
+
+						margin: 0 0 15px 0;
+
+					}
+
+				}
+
+				&:last-of-type {
+
+					width: 100%;
+					max-width: 240px;
+					margin: 0 auto;
+
+					@media screen and (min-width: 510px) {
+
+						width: auto;
+						max-width: none;
+						margin: 0;
+						align-items: flex-end;
+
+					}
+
+				}
+
+			}
+
+				.inner-sub-section {
+
+					@include group;
+
+					@media screen and (min-width: 510px) {
+
+						width: 50%;
+
+					}
+
+					&:first-of-type {}
+
+					&:last-of-type {}
+
+				}
+
+					.block {
+
+						.title {
+
+							h3 {
+
+								margin: 0;
+								color: $primary-color;
+
+							}
+
+						}
+
+						.container {}
+
+					}
+
+					.elsewhere {
+
+						float: left;
+						width: 110px;
+						margin: 0 18px 0 0;
+
+						.title {
+
+							margin: 0 0 7px 0;
+
+							h3 {}
+
+						}
+
+						.container {}
+
+							.other {}
+
+								ul {
+
+									margin: 0;
+									padding: 0;
+									list-style: none;
+
+								}
+
+									li {
+
+										margin: 0 0 2px 0;
+										@include crimson-normal-italic;
+
+										&:last-of-type {
+
+											margin: 0;
+
+										}
+
+									}
+
+										a {
+
+											&:hover {}
+
+										}
+
+					}
+
+					.contact {
+
+						float: left;
+
+						.title {
+
+							margin: 0 0 7px 0;
+
+							h3 {}
+
+						}
+
+						.container {}
+
+							.email {
+
+								@include crimson-normal-italic;
+
+							}
+
+								a {
+
+									&:hover {}
+
+								}
+
+					}
+
+					.newsletter-sign-up {
+
+						position: relative;
+						margin: 30px 0 0 0;
+
+						@media screen and (min-width: 510px) {
+
+							margin: 0;
+
+						}
+
+						.title {
+
+							margin: 0 0 2px 0;
+
+							@media screen and (min-width: 780px) {
+
+								margin: 0;
+
+							}
+
+							h3 {}
+
+						}
+
+						.container {
+
+							width: 230px;
+
+							@media screen and (min-width: 510px) {
+
+								width: 155px;
+
+							}
+
+							@media screen and (min-width: 780px) {
+
+								position: absolute;
+								left: 128px;
+								bottom: 4px;
+								z-index: 1;
+
+							}
+
+						}
+
+							.newsletter-form {}
+
+								.wpcf7 {}
+
+								.screen-reader-response {}
+
+								form {}
+
+									// Hidden inputs...
+
+									div {}
+
+									.field {}
+
+										.wpcf7-form-control-wrap {}
+
+											input[type="email"] {
+
+												padding: 2px 0;
+												@include crimson-normal-italic;
+												text-transform: lowercase;
+												color: $primary-color;
+												background: none;
+												border-bottom: 1px solid $primary-color;
+												outline: none;
+
+												&::-webkit-input-placeholder {
+
+													color: $primary-color;
+
+												}
+
+												&:-moz-placeholder {
+
+													color: $primary-color;
+
+												}
+
+												&::-moz-placeholder {
+
+													color: $primary-color;
+
+												}
+
+											}
+
+											.wpcf7-not-valid-tip {
+
+												position: absolute;
+												left: 0;
+												top: 5px;
+												width: 155px;
+												@include crimson-normal-italic;
+												text-transform: lowercase;
+												color: $required;
+												z-index: 1;
+
+											}
+
+									.send-button {
+
+										// Temporarily hidden...
+
+										display: none;
+
+									}
+
+										input[type="submit"] {}
+
+										.ajax-loader {
+
+											display: none;
+
+										}
+
+									.wpcf7-response-output {
+
+										// This is not needed, since there is only one field in use...
+
+										display: none !important;
+
+									}
+
+							// MailChimp
+
+							#mc_embed_signup {}
+
+								#mc-embedded-subscribe-form {}
+
+									#mc_embed_signup_scroll {}
+
+										.mc-field-group {}
+
+											label {
+
+												display: none;
+
+											}
+
+											input[type="email"] {}
+
+											div.mce_inline_error {
+
+												position: absolute;
+												left: 0;
+												top: 25px;
+												width: 155px;
+												margin: 0;
+												padding: 0;
+												@include crimson-normal-italic;
+												text-transform: lowercase;
+												color: $required;
+												background: none;
+												z-index: 1;
+
+											}
+
+										#mce-responses {
+
+											position: fixed;
+											left: 0;
+											bottom: 0;
+											width: 100%;
+											background: $white;
+											z-index: 1;
+
+										}
+
+											.response {
+
+												width: 100%;
+												max-width: 900px;
+												margin: 0 auto;
+												padding: 5px 20px;
+												@include crimson-normal-italic;
+												text-align: center;
+												background: $white;
+
+											}
+
+											#mce-error-response {}
+
+											#mce-success-response {}
+
+										input[type="submit"] {
+
+											position: absolute;
+											left: -9999px;
+
+										}
+
+					}
+
+					.be-social {
+
+						clear: both;
+						width: 232px;
+						margin: 28px 0 0 0;
+
+						@media screen and (min-width: 510px) {
+
+							float: right;
+							width: 195px;
+							margin: 0;
+
+						}
+
+						.title {
+
+							margin: 0 0 10px 0;
+
+							h3 {}
+
+						}
+
+						.container {}
+
+							.connect {}
+
+								ul {
+
+									display: flex;
+									flex-direction: row;
+									flex-wrap: nowrap;
+									justify-content: space-between;
+									align-items: flex-start;
+									align-content: flex-start;
+
+									margin: 0;
+									padding: 0;
+									list-style: none;
+
+								}
+
+									li {
+
+										@include hide-text;
+
+									}
+
+										a {
+
+											display: block;
+											width: 14px;
+											height: 14px;
+											background: url(../img/be-social-alt.svg);
+											background-size: 84px 14px;
+
+											.no-svg & {
+
+												background-image: url(../img/be-social-alt.png);
+
+											}
+
+											&:hover {}
+
+										}
+
+									.instagram {
+
+										a {
+
+											&:hover {}
+
+										}
+
+									}
+
+									.twitter {
+
+										a {
+
+											background-position: -14px 0;
+
+											&:hover {}
+
+										}
+
+									}
+
+									.pinterest {
+
+										a {
+
+											background-position: -28px 0;
+
+											&:hover {}
+
+										}
+
+									}
+
+									.facebook {
+
+										a {
+
+											background-position: -42px 0;
+
+											&:hover {}
+
+										}
+
+									}
+
+									.tumblr {
+
+										a {
+
+											background-position: -56px 0;
+
+											&:hover {}
+
+										}
+
+									}
+
+									.rss {
+
+										a {
+
+											background-position: -70px 0;
+
+											&:hover {}
+
+										}
+
+									}
+
+					}
+
+					.search {
+
+						width: 230px;
+						margin: 30px 0 6px 0;
+
+						@media screen and (min-width: 510px) {
+
+							float: right;
+							clear: right;
+							width: 195px;
+							margin: 0 0 6px 0;
+
+						}
+
+						.title {
+
+							display: none;
+
+							h3 {
+
+								@include font-size(13);
+								line-height: (19/13) + em;
+								@include crimson-normal-italic;
+								text-transform: lowercase;
+								letter-spacing: 0;
+
+							}
+
+						}
+
+						.container {
+
+							position: relative;
+
+						}
+
+							.search-form {}
+
+								form {}
+
+									.search-form-wrap {}
+
+										label {
+
+											display: inline-block;
+											margin: 0;
+											@include crimson-normal-italic;
+											text-transform: lowercase;
+											color: $primary-color;
+
+										}
+
+										input[type="text"] {
+
+											position: absolute;
+											left: 33px;
+											right: 18px;
+											bottom: 5px;
+											width: auto;
+											padding: 2px 0;
+											@include crimson-normal-italic;
+											color: $primary-color;
+											background: none;
+											border-bottom: 1px solid $primary-color;
+											outline: none;
+											z-index: 1;
+
+											&::-webkit-input-placeholder {
+
+												color: $primary-color;
+
+											}
+
+											&:-moz-placeholder {
+
+												color: $primary-color;
+
+											}
+
+											&::-moz-placeholder {
+
+												color: $primary-color;
+
+											}
+
+										}
+
+										input[type="submit"] {
+
+											position: absolute;
+											right: 0;
+											bottom: 3px;
+											display: block;
+											width: 12px;
+											height: 12px;
+											padding: 0;
+											background: url(../img/search.svg);
+											@include hide-text;
+
+											.no-svg & {
+
+												background-image: url(../img/search.png);
+
+											}
+
+											z-index: 1;
+
+										}
+
+					}
+
+					.copyright {
+
+						position: relative;
+						left: 17px;
+						bottom: -4px;
+						margin: 22px 0 0 0;
+
+						@media screen and (min-width: 510px) {
+
+							float: right;
+							clear: right;
+							left: auto;
+							margin: -2px 0 0 0;
+
+						}
+
+						@media screen and (min-width: 780px) {
+
+							position: static;
+							margin: 0;
+
+						}
+
+						.title {
+
+							display: none;
+
+							h3 {}
+
+						}
+
+						.container {}
+
+							#copyright {
+
+								margin: 0;
+								@include crimson-normal-italic;
+								color: $primary-color;
+								letter-spacing: 0.15px;
+
+							}
+
+					}
+
+}

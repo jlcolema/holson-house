@@ -1,0 +1,214 @@
+
+/*-------------------------------------------
+	Header
+-------------------------------------------*/
+
+
+#header {
+
+	padding: 35px 0 70px 0;
+
+	.wrap {
+
+		max-width: none;
+		padding: 0;
+
+	}
+
+}
+
+		#logo {
+
+			margin: 0 0 14px 0;
+			overflow: hidden;
+
+			.inner-logo {
+
+				position: relative;
+				width: 120px;
+				margin: 0 auto;
+				@include hide-text;
+				overflow: visible;
+
+				&:after {
+
+					content: "";
+
+					position: absolute;
+					left: 80px;
+					top: 8px;
+					width: 10000px;
+					height: 16px;
+					background: url(../img/fork-handle.svg);
+					background-size: 2000px 16px;
+					z-index: 1;
+
+					.no-svg & {
+
+						background-image: url(../img/fork-handle.png);
+
+					}
+
+				}
+
+			}
+
+				a {
+
+					display: block;
+					height: 192px;
+					background: url(../img/logo.svg);
+					background-size: 120px 192px;
+
+					.no-svg & {
+
+						background-image: url(../img/logo.png);
+
+					}
+
+					&:hover {}
+
+				}
+
+		}
+
+		#nav {
+
+			.toggle {
+
+				// Temporarily hidden...
+
+				display: none;
+
+				span {}
+
+			}
+
+			ul {
+
+				display: flex;
+				flex-direction: row;
+				flex-wrap: no-wrap;
+				justify-content: center;
+				align-items: flex-start;
+				align-content: flex-start;
+
+				margin: 0;
+				padding: 0;
+				list-style: none;
+
+			}
+
+				li {
+
+					@include crimson-normal-italic;
+
+				}
+
+					a {
+
+						display: block;
+						height: 32px;
+						padding: 7px 9px 0 9px;
+
+						@media screen and (min-width: 340px) {
+
+							padding: 7px 9px 0 9px;
+
+						}
+
+						&:hover {}
+
+					}
+
+					.sub-menu {
+
+						display: none;
+
+						position: absolute;
+						left: -6px;
+						top: 32px;
+
+						width: 160px;
+						padding: 0 0 15px 0;
+
+						background: $white;
+
+						z-index: 5;
+
+						li {}
+
+							a {
+
+								position: relative;
+								height: auto;
+								padding: 5px 15px 1px 15px;
+								text-decoration: none;
+
+								&:after {
+
+									content: "";
+
+									position: absolute;
+									left: 15px;
+									bottom: 0;
+									right: 15px;
+									height: 1px;
+									background: $primary-color;
+									z-index: 1;
+
+								}
+
+								&:hover {}
+
+							}
+
+					}
+
+				// Current Section
+
+				.current-menu-item,
+				.current-menu-parent,
+				.single-post & .current_page_parent {
+
+					> a {
+
+						text-decoration: underline;
+
+					}
+
+				}
+
+				// Title...
+
+				.menu-item-has-children {
+
+					position: relative;
+
+					.sub-menu {
+
+						// Temporarily hidden...
+
+						// display: none;
+
+					}
+
+					&:hover {
+
+						> a {
+
+							text-decoration: underline;
+
+						}
+
+						.sub-menu {
+
+							display: block;
+
+						}
+
+					}
+
+				}
+
+		}
